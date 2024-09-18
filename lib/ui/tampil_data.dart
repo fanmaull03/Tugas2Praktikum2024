@@ -24,6 +24,7 @@ class TampilData extends StatelessWidget {
               color: Color(0xFF008F11),
             )),
         backgroundColor: Colors.black,
+        iconTheme: IconThemeData(color: Color(0xFF008F11)),
       ),
       body: Container(
         margin: const EdgeInsets.all(10),
@@ -34,12 +35,27 @@ class TampilData extends StatelessWidget {
             Text(
               "Nama saya $nama, NIM $nim, dan umur saya adalah $umur tahun.",
               style: const TextStyle(
-                fontFamily: 'Times New Roman',
+                fontFamily: 'Poppins',
                 color: Color(0xFF008F11),
                 fontSize: 18,
               ),
             ),
             const SizedBox(height: 20),
+            Expanded(child: Container()), // To push footer to the bottom
+            Container(
+              padding: const EdgeInsets.all(10),
+              color: Color(00000), // Green color for footer background
+              child: Center(
+                child: Text(
+                  "© 2024 Ifan Maull. All rights reserved.",
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    color: Color(0xFF008F11),
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

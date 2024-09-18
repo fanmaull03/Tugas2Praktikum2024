@@ -20,7 +20,7 @@ class FormDataState extends State<FormData> {
       appBar: AppBar(
         title: const Text("INPUT DATA",
             style: TextStyle(
-                fontFamily: 'Times New Roman',
+                fontFamily: 'Poppins',
                 letterSpacing: 2,
                 color: Color(0xFF008F11))),
         backgroundColor: Colors.black,
@@ -46,6 +46,22 @@ class FormDataState extends State<FormData> {
                 height:
                     20), // Jarak antara textbox Tahun Lahir dan tombol simpan
             _tombolSimpan(),
+            const Spacer(), // Spacer untuk mendorong footer ke bawah
+            const Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: EdgeInsets.only(
+                    bottom: 10), // Tambahkan padding jika diperlukan
+                child: Text(
+                  '© 2024 Ifan Maull. All rights reserved.',
+                  style: TextStyle(
+                    color: Color(0xFF008F11),
+                    fontFamily: 'Poppins',
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -57,9 +73,8 @@ class FormDataState extends State<FormData> {
     return TextField(
       decoration: const InputDecoration(
         labelText: "Nama",
-        labelStyle: TextStyle(
-            color: Colors.white,
-            fontFamily: 'Times New Roman'), // Times New Roman
+        labelStyle:
+            TextStyle(color: Colors.white, fontFamily: 'Poppins'), // Poppins
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: Color(0xFF008F11)),
         ),
@@ -69,8 +84,7 @@ class FormDataState extends State<FormData> {
       ),
       controller: _namaController,
       style: const TextStyle(
-          color: Colors.white,
-          fontFamily: 'Times New Roman'), // Times New Roman
+          color: Colors.white, fontFamily: 'Poppins'), // Poppins
       cursorColor: const Color(0xFF00CC00),
     );
   }
@@ -79,9 +93,8 @@ class FormDataState extends State<FormData> {
     return TextField(
       decoration: const InputDecoration(
         labelText: "NIM",
-        labelStyle: TextStyle(
-            color: Colors.white,
-            fontFamily: 'Times New Roman'), // Times New Roman
+        labelStyle:
+            TextStyle(color: Colors.white, fontFamily: 'Poppins'), // Poppins
         enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Color(0xFF008F11))),
         focusedBorder: OutlineInputBorder(
@@ -89,8 +102,7 @@ class FormDataState extends State<FormData> {
         ),
       ),
       controller: _nimController,
-      style:
-          const TextStyle(color: Colors.white, fontFamily: 'Times New Roman'),
+      style: const TextStyle(color: Colors.white, fontFamily: 'Poppins'),
       cursorColor: const Color(0xFF00CC00),
     );
   }
@@ -99,8 +111,7 @@ class FormDataState extends State<FormData> {
     return TextField(
       decoration: const InputDecoration(
         labelText: "Tahun Lahir",
-        labelStyle:
-            TextStyle(color: Colors.white, fontFamily: 'Times New Roman'),
+        labelStyle: TextStyle(color: Colors.white, fontFamily: 'Poppins'),
         enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Color(0xFF008F11))),
         focusedBorder: OutlineInputBorder(
@@ -108,8 +119,7 @@ class FormDataState extends State<FormData> {
         ),
       ),
       controller: _tahunController,
-      style:
-          const TextStyle(color: Colors.white, fontFamily: 'Times New Roman'),
+      style: const TextStyle(color: Colors.white, fontFamily: 'Poppins'),
       cursorColor: const Color(0xFF00CC00),
     );
   }
@@ -129,7 +139,7 @@ class FormDataState extends State<FormData> {
         textStyle: const TextStyle(
           color: Colors.black,
           fontSize: 18,
-          fontFamily: 'Times New Roman', // Menggunakan Times New Roman
+          fontFamily: 'Poppins', // Menggunakan Poppins
           letterSpacing: 2,
         ),
       ),
